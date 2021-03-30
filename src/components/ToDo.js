@@ -7,13 +7,13 @@ export default ({text, id, isCompleted}) => {
     <li>
         <span>{text}</span>
         <span onClick={() => dispatch({ type: DEL, payload: id })}>
-        ➖
+        ❌
         </span>
         <span onClick={() => dispatch({ type: isCompleted ? UNCOMPLETE : COMPLETE, payload: id }
         )
       }
     >
-        {isCompleted? "❌" : "⭕️"}
+        {isCompleted? "➖" : "⭕️"}
         </span>
     </li>
     );
