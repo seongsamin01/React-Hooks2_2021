@@ -32,7 +32,8 @@ import reducer, { initialState, ADD, DEL, COMPLETE, UNCOMPLETE } from "./reducer
             {state.toDos.map(toDo => ( 
               <li key={toDo.id}>
                 <span>{toDo.text}</span>
-                <span onClick={() => dispatch({ type: DEL, payload: toDo.id })}>👍</span>
+                <span onClick={() => dispatch({ type: COMPLETE, payload: toDo.id })}>⭕️</span>
+                <span onClick={() => dispatch({ type: DEL, payload: toDo.id })}>❌</span>
               </li>
             ))}
           </ul>
@@ -47,7 +48,7 @@ import reducer, { initialState, ADD, DEL, COMPLETE, UNCOMPLETE } from "./reducer
                   👍
                 </span>
                 <span onClick={() => dispatch({ type: UNCOMPLETE, payload: toDo.id })}>
-                  👎
+                ❌
                 </span>
               </li>
           ))}</>)}
