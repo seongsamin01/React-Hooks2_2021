@@ -13,8 +13,12 @@ const ToDosProvider = ({ children }) => {
 };
 
 export const useDispatch = () => {
-    const {dispatch} = useContext(ToDosContext);
+    const { dispatch } = useContext(ToDosContext);
     return dispatch;
 };
 
+export const useState = () => {
+    const { state } = useContext(ToDosContext);
+    return state;
+};
 export default ToDosProvider;
